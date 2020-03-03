@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twig.js templating test</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:400,500,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css?1583234722156">
+</head>
+<body>
+
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="/" class="header__logo">
+                <img src="../images/logo.png" alt="logo">
+            </a>
+            <div class="header__right">
+                <div class="header__right-block header__right-block--border-bottom">
+                    <div class="header__left-element">
+                        <a href="#">Каталог инструментов</a>
+                        <a href="#">Все для сада</a>
+                        <a href="#">Ручной инструмент</a>
+                        <a href="#">Электрика</a>
+                        <a href="#">Доставка</a>
+                        <a href="#">Оплата</a>
+                        <a href="#">О нас</a>
+                    </div>
+                    <div class="header__right-element">
+                        <a href="#">Вход</a>
+                        <span>|</span>
+                        <a href="#">Регистрация</a>
+                    </div>
+                </div>
+                <div class="header__right-block">
+                    <div class="header__left-element">
+                        <img src="images/header-img.jpg" alt="header-img">
+                        <div class="header__links">
+                            <a href="#" class="header__links-first">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="31" viewBox="0 0 34 31"><g><g><image width="34" height="31" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAYAAACCox+xAAADT0lEQVRYR72XPWhTURTH/+elDSmlLkVqB0GqqIvQ9L4mCkUElQ4d1KGig1CX+lGUIn6g4idCBxGdFPwadHAoiFIoLtIupUreTa2CQylRu7g41UFN8+6RE15KmuYlL2nTCy+Bm3vP+d3/OfecF8LyQQC4yHxNp8RpsbHmMH4gNT2938lroUjFipZSxAJgSuRQobOKnefbDhKacg5yNiTBc2sLv3M+fW0FAak2X/IBy9pYLRC/MMp8rhSULAlBQfwkLTZfLpS+9aKsbDVekFUzqCIrYSml0OJvy0CUUl8BbPc8z2mtN62EIsDeLIx85BOTUioDIJdkZIzZNzU19T6AwRUtKRYagYBt27uZeQyAgH0HsKUCT8zMj5PJ5ElvT7n6klXDdyilfgFoBjAIoB9AK4AGABEAC0TkMHMMQAhACoALYLOozMwPksnkuaDwxUAWC1E0GrUty0oA+KC13pUzqpT60tbW1j48POzG4/GWTCbzXGvdIwBKqZ8AWoioy3GciYAgVPY1IM/wTmPMCSKKAmgHkAQwB0AU2QDgHYB1ALq8HtWgtV4ICFI6NF6uHGDmNwDGmHnAsqytEn9mPuW67sf6+vo+Zj5qjDlsWdYAgNMAxrXWe32aZnUFrbe3N5RKpX7IqY0xrUR0iIjuAhgiomkAB5m5m5kvEdFxAN0A7mitrwVVQ9YFKmgdHR2DRHQfwDMAe7yE9PVDRD2O44yuOkgsFmt2XXcGQJqI5CZEjTF1lmVlD8KcrUcuM4eJ6Fs4HH40OTn5Z6UgRUuybds3mfmGgDiOI+qs2YvREkednZ0bjTGiSh2Az149kWIn68LeMx2JRI5NTEz89lHD9x0lUI7k1Y+z3q1o8kCkkAnMXwkNEc0w8xGttRTCikZQkKw6tm1Lot4C8DSTyYyIp8bGRjedTseNMdeJ6InjOC8rIsjrAaX2LUpp2/Y2Zn4NQG7Dfsuy+hKJxKdoNLo+FAqNMrM0RrnaFx3HeVspTFBFpAnGmPkVEV1l5ttEdEEcKqV2eHBnANyTR2v9sGYgkpS2bV9h5j4AL5qamobGx8elyQlkPzOfZ+aR+fn5y7Ozs/9qCVJou7C1V+p7yfrAoSnIqfyrnf9/pmqYakBWxXEh8X/bKjgwUDnmnQAAAABJRU5ErkJggg=="/></g></g></svg>                                3 шт. /  17 250 р.
+                            </a>
+                            <a href="#" class="header__links-second">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="14" viewBox="0 0 15 14"><g><g><image width="15" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAABU0lEQVQ4T5WRPUvDUBSGnwuhiBA/QHBx0MHBIShNSBaF4B+wmw6O7gpW/Q1qBd3dXHRS/4AUnCK5bYqDg4sFFze1RRyaHknRUkJT6tku933Ox/sqskvZtl3SWhcB6SdTWWw+n19XSl2KyEalUrkaGvZ9f6TRaDwBs8CLaZoL5XL5O92g72THcfZF5PBPrJQ6CMPwKBN2XXeu3W5bIrIE7AJjPeJP4EQpFcVxXKtWq/XkLzHlGNgCJgaYl/56B84TeAq4A6x/wI/Aaudmz/OmW63WPTA/RINnwzBWgiB46xrmed7Mb4PE4ayqG4axHATBa+fmXpVt26fA9gD4TGu9000hBd8AawPgW611IQuOgMUe+AsY7XnXtNZJlJ1Kr51EMA48ACXTNK+bzWZBRPYAF/jQWncj7cKWZU3mcrkLpVQpDMNyenXHcXwRKcZxvBlFUTKEH+GadOAtZ+QDAAAAAElFTkSuQmCC"/></g></g></svg>                                Избранное (7)
+                            </a>
+                            <a href="#" class="header__links-third">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="50" viewBox="0 0 46 50"><g><g><image width="46" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAyCAYAAAAjrenXAAAECElEQVRoQ+2ZTWhcVRTHf+dO0phqyEZERBfqiDaF6MyLYFYNBAWlK2kQQVDQhV1UxIUgFUqtC6lQwU0RtCvFRargTqXgB1o0vDfRQbMQxHVdKDK16Tj1nXKG9+AZJjPv42biIhdCkrn3nvM7//t/996XCIObALpNX9mPvca0YNu1NNGwhF5hiiiyHbgPIB8xhqqa7SybrOy8IiL/Z+wwq9jAtH+Y38cOnQUbVvkgr+8K7FZr5F2urbD2u33FyXffu9BQrlFW2To5q771GWy2gLwiVB7nc1fJxkoL2rFVKKJ43v18LP7PCz7I32XU9FZUXvDKnvQdIA+4N5V8wucBH5Rv14spA77r0HlPzkF3mUHw0mw2V0TkNPAH8EIURd/uwPW4z1NG8YFWbTQa9zvnvgfWgJuBG3u93oPtdvt3n95OY/kEX3bOXRCRp+M4PigiL9VqtYNra2u/WDIrDJis1+vrq6ur/1Ytxhv43NzcTdPT0x8BjwDXVPX1Vqt1cnFxcbrb7S6LyDlgWkSeCsPwk/8NuIHMz8/fMjk5+RtwVVWP2kci8hhwALghgT0RRdFrPsGr7BYSBMG9wBHgVaCW3Bq7wEXgEDAB9IAfNzc3H97Y2LhcBb6UVZrN5rxz7oyq2oP3J/AocCuwL4G+Yl6fmpr6rNvtHlbVc6r6jHPukqpeUNVTZqOxgwdB8DZwLEl8WUS+ieP4fRH5B/gA+EtVT4uIFfMcsB84C1i/WchW5FPguyiK3ihTQFnFz4vI47adisjzYRi+Y8mDILgbsF3kkoicVNXjwB3bgPVE5Fg6tyh8YfCFhYUjqvoh8KaxAg/0er272u32341GY84597MpG8fxnaq6b2Ji4qyqph63fOb7n4BXoij6oihwMl7St5eRV9QgCFaA2wDz5n5VfUJE7gNOiciXwJk4jg+JyMvJdhi0Wq12socv1Gq1e+I4rqnqr+vr63ZQ2Stf6ZZb8SAI3gWeTTJtfcOxOFeBj4En+0eySBCG4XppshETc4PX6/Wp2dnZE8CLdpBk4loRPwArzrnb4zg29a09FEWRKbsjLTd4mr3ZbB5wzi0D9iBeUdWvZmZmvu50OovAW4Ad7ajqRXtAoyj6fCfIC4NnIPoH1tLS0kSn0zkPHE62uSynHTjvJTdF+9lbqwLehwiCwB5Ws495/BqQvUD1DyQRORqGoRXnrZUFr3I98AJfFtxL8ipB9sCrqFdm7p7iZVSrMmdP8QLqedlKyyjuJXGBQgcOLQueBtu1/w0VAU+VHvhXrIwsI+/2VdW2+XnBt4PNQo7VQnnBU5GycHlBR40b1e/N44OK8LH6hWIUVbxQ8JyDx6p4qWQ5C8k1zLfiYyvIN3gutXwMGgf4jqzCdXAYNUOvC99OAAAAAElFTkSuQmCC"/></g></g></svg>                                К сравнению (5)
+                            </a>
+                        </div>
+                        <div class="cart-links">
+                            <a href="#"><img src="images/item1.jpg" alt="item1"></a>
+                            <a href="#"><img src="images/item2.jpg" alt="item2"></a>
+                            <a href="#"><img src="images/item3.jpg" alt="item3"></a>
+                        </div>
+                    </div>
+                    <div class="header__right-element header__right-element--column">
+                        <div class="header__time">
+                            <span>Время работы:</span><span>10:00 — 19:00</span>
+                        </div>
+                        <a href="tel:84957212525" class="header__phone">
+                            8 495 721-25-25
+                        </a>
+                        <div class="header__city">
+                            <span>Москва</span>
+                            <a href="#">
+                                <svg height="9" viewBox="0 0 8 9" width="8" xmlns="http://www.w3.org/2000/svg"><path d="m7.6 4.5-7.2 4.05v-8.1z" fill="#333"/></svg>сменить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <div class="menu__inner">
+                <a href="#" class="search"><svg height="19" viewBox="0 0 19 19" width="19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image height="19" width="19" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAABfElEQVQ4T7XTvUoDQRAA4JlZEJJCQd/iwGIvmzpXSwrT2VmmS5nWpNUulWmEgIVWNmnsksoim9tCuLdQVISAsDuy4snl56IX4lXHzey3M3O7CJlHSqmEEHXnXISIhz7EzI9ENLLWDo0xOpu/+I7pB6VUk5lbABDkLEgQsae17ueBX9g3dA4Au4ionXNDIcTIx6y1ERHVmVkBwBsitvNA9K0R0cBXxMx9Zu4ZY5KF9gNEbCFiEwAS59zpqpZRKdVh5jNfkbXWJ81BKSqlDIQQA18hIna11p2lmYVhOELEGjN34jjurhtwGIZ+U7/5OI7jaAmrVCpPALBPRNFkMhmvw6rVas0552f5PJ1OD/4X22qbW/0Bfz0aRHQNABIAXpxzR8aYh5U3oMChTdffzWazkyRJPrJgkev0CgB7mcVL4A/mk3656PdE1AaA4zxwDlt3xnwsCIKdUql0mwcWwjLgDQA0FissjOWBzHy1EZYDvm+MpWC5XL5k5gYzX3wCQk8SdlojXKcAAAAASUVORK5CYII="/></svg></a>
+                <a href="#" class="menu__link">Перфораторы</a>
+                <a href="#" class="menu__link">Дрели</a>
+                <a href="#" class="menu__link">Шлифмашины</a>
+                <a href="#" class="menu__link">Пистолеты</a>
+                <a href="#" class="menu__link">Электропилы</a>
+                <a href="#" class="menu__link">Наборы инструментов</a>
+                <a href="#" class="menu__link">Аксессуары</a>
+            </div>
+            <a href="#" class="sale">Распродажа</a>
+        </nav>
+    </div>
+</header>
+
+    <div class="main">
+
+    </div>
+
+<footer class="footer">
+
+</footer>
+
+<script src="js/vendor.js?1583234722159"></script>
+<script src="js/index.js?1583234722160"></script>
+</body>
+</html>
